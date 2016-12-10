@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Soru {{ index + 1}} - {{questions[index].q}}</h3>
+        </div>
+        <div class="panel-body">
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="well">
+                {{questions[index].a}}
+              </div>
+              <div class="well">
+                {{questions[index].b}}
+              </div>
+              <div class="well">
+                {{questions[index].c}}
+              </div>
+              <div class="well">
+                {{questions[index].d}}
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <button class="btn btn-default" (click)="previous()">
+                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+              </button>
+              <button class="btn btn-default" (click)="next()">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+              </button>
+              <button class="btn btn-default" (click)="showAnswer()">
+                Cevap Goster
+              </button>
+              <span *ngIf="show">
+                Cevap : {{ questions[index].ans }}
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
